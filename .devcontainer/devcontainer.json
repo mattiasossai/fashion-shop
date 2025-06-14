@@ -1,7 +1,7 @@
 {
   "name": "Used Fashion Shop Devcontainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:20.7",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20",
   "forwardPorts": [1337, 3001],
   "postCreateCommand": "cd backend && npm install && cd ../storefront && npm install",
-  "postStartCommand": "bash -lc 'cd backend && npm run develop & cd ../storefront && npm run dev -- -p 3001'"
+  "postStartCommand": "bash -lc \"cd backend && npm run develop & cd ../storefront && npm run dev -- -p 3001\""
 }

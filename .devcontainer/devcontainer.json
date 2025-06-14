@@ -3,11 +3,11 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
 
   // Ports, die automatisch weitergeleitet werden
-  "forwardPorts": [3000, 3001],
+  "forwardPorts": [1337, 3001],
 
   // Einmalig nach Create: Abhängigkeiten installieren
   "postCreateCommand": "cd backend && npm install && cd ../storefront && npm install",
 
   // Bei jedem Start/Rebuild: Backend & Frontend automatisch starten
-  "postStartCommand": "bash -lc 'cd backend && npm run start & cd ../storefront && npm run dev -- -p 3001'"
+  "postStartCommand": "bash -lc 'cd backend && npm run develop & cd ../storefront && npm run dev -- -p 3001'"
 }

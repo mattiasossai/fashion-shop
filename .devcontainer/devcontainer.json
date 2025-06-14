@@ -1,13 +1,7 @@
 {
   "name": "Used Fashion Shop Devcontainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
-
-  // Ports, die automatisch weitergeleitet werden
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20",
   "forwardPorts": [1337, 3001],
-
-  // Einmalig nach Create: Abhängigkeiten installieren
   "postCreateCommand": "cd backend && npm install && cd ../storefront && npm install",
-
-  // Bei jedem Start/Rebuild: Backend & Frontend automatisch starten
   "postStartCommand": "bash -lc 'cd backend && npm run develop & cd ../storefront && npm run dev -- -p 3001'"
 }

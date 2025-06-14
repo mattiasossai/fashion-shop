@@ -1,74 +1,74 @@
-# Node modules
+# ───────────────────────────────────────────────────────────────────────────────
+# OS-Dateien
+# ───────────────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+._*
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+*~    # Linux temp files
+
+# ───────────────────────────────────────────────────────────────────────────────
+# Node / Packages
+# ───────────────────────────────────────────────────────────────────────────────
+# Dependencies
 /backend/node_modules/
 /storefront/node_modules/
 
-# Next.js build output
-/.next/
-/storefront/.next/
-/.next/*
-
-
-# Next.js build & cache
-/storefront/.next/
-/storefront/.next/cache/
-
-# Optional: weitere Build-Ordner
-/dist/
-/build/
-
-# Vendure SQLite (Entwicklung)
-/backend/vendure.sqlite
-
-# Environment variables
-.env
-.env.*.local
-
-# Lockfiles
-package-lock.json
+# Lock- und Log-Files
 **/package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Devcontainer & Editor settings
-.vscode/
-.idea/
-
-# Logs
+**/yarn.lock
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
-*.log
 
-# OS-Files
-.DS_Store
-Thumbs.db
-
-# Test coverage
-coverage/
-jest-coverage/
-
-# Misc Caches
-/.cache/
-/tmp/
-
-# Strapi / Backend
-/backend/node_modules/
-/backend/package-lock.json
-/backend/data.db
-
-# Next.js / Storefront
-/storefront/node_modules/
+# Build-Artefakte
+/backend/build/
+/backend/dist/
 /storefront/.next/
+/storefront/.vercel/
 /storefront/.turbo/
-/storefront/.vercel
 
-# IDE und Container
+# SQLite-Datenbank (Strapi Quickstart)
+/backend/data.db
+/backend/*.sqlite*
+!/backend/.keep          # falls du eine Git-Dummy-Datei im uploads-Ordner brauchst
+
+# Strapi-Speziell
+/backend/.cache/
+/backend/.tmp/
+/backend/exports/
+/backend/.strapi/
+/backend/strapi-updater.json
+/backend/strapi-cloud.json
+
+# Next.js Static-Chunks
+/storefront/.next/
+/storefront/.next/**
+
+# ───────────────────────────────────────────────────────────────────────────────
+# IDE / Devcontainer
+# ───────────────────────────────────────────────────────────────────────────────
 .devcontainer/
 .vscode/
 .idea/
 
-# Logs, OS, Cache
-npm-debug.log*
-yarn-debug.log*
-.DS_Store
-Thumbs.db
+# ───────────────────────────────────────────────────────────────────────────────
+# Sonstiges
+# ───────────────────────────────────────────────────────────────────────────────
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.pid
+*.seed
+
+coverage/

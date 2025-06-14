@@ -5,6 +5,8 @@
 # Next.js build output
 /.next/
 /storefront/.next/
+/.next/*
+
 
 # Next.js build & cache
 /storefront/.next/

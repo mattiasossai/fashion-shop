@@ -1,33 +1,31 @@
 import { VendureConfig } from '@vendure/core';
 import { DefaultJobQueuePlugin } from '@vendure/core';
 import { DefaultSearchPlugin } from '@vendure/core';
-import { join } from 'path';
+import * as path from 'path';
 
 export const config: VendureConfig = {
   apiOptions: {
     port: 3000,
     adminApiPath: 'admin-api',
     shopApiPath: 'shop-api',
+    // **DIESEN BLOCK HINZUFÜGEN/PRÜFEN**
     playground: {
-      admin: true,
-      shop: true,
+      admin: true,    // Admin-API-Playground aktivieren
+      shop: true      // Shop-API-Playground aktivieren
     },
   },
   dbConnectionOptions: {
-  type: 'sqlite',
-  synchronize: true,               // Erzeugt Schema automatisch beim Start
-  database: join(__dirname, 'vendure.sqlite'),
-},
+    type: 'sqlite',
+    synchronize: true,
+    database: path.join(__dirname, 'vendure.sqlite'),
+  },
   authOptions: {
     sessionSecret: process.env.SESSION_SECRET || 'changeme',
     tokenMethod: 'bearer',
   },
-  paymentOptions: {
-    paymentMethodHandlers: [],
-  },
   plugins: [
     DefaultJobQueuePlugin,
     DefaultSearchPlugin,
-    // deine Plugins hier
+    // …deine weiteren Plugins
   ],
 };

@@ -6,6 +6,10 @@
 /.next/
 /storefront/.next/
 
+# Next.js build & cache
+/storefront/.next/
+/storefront/.next/cache/
+
 # Optional: weitere Build-Ordner
 /dist/
 /build/

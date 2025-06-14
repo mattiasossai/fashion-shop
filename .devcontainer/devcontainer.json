@@ -1,7 +1,11 @@
 {
   "name": "Used Fashion Shop Devcontainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-20",
-  "forwardPorts": [1337, 3001],
+  // auf Node 22 wechseln, damit Strapi Sharp-Plugin und Next.js laufen
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:1-22",
+  // die Ports, die wir brauchen: Strapi (1337), Vendure/Shop (3000), Next.js (3001)
+  "forwardPorts": [1337, 3000, 3001],
+  // einmalig nach Create: Dependencies installieren
   "postCreateCommand": "cd backend && npm install && cd ../storefront && npm install",
-  "postStartCommand": "bash -lc \"cd backend && npm run develop & cd ../storefront && npm run dev -- -p 3001\""
+  // bei jedem Start/Rebuild: Backend (Strapi) und Frontend (Next.js) automatisch starten
+  "postStartCommand": "bash -lc \"cd backend && npm run develop && cd ../storefront && npm run dev -- -p 3001\""
 }

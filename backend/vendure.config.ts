@@ -8,11 +8,8 @@ export const config: VendureConfig = {
     port: 3000,
     adminApiPath: 'admin-api',
     shopApiPath: 'shop-api',
-    // **DIESEN BLOCK HINZUFÜGEN/PRÜFEN**
-    playground: {
-      admin: true,    // Admin-API-Playground aktivieren
-      shop: true      // Shop-API-Playground aktivieren
-    },
+    adminApiPlayground: true, // Admin-Playground aktiv
+    shopApiPlayground: true,  // Shop-Playground aktiv
   },
   dbConnectionOptions: {
     type: 'sqlite',

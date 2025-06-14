@@ -5,10 +5,11 @@
     "start": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "dependencies": {
-    "@vendure/core": "^2.3.0",
     "@vendure/cli": "^2.3.0",
+    "@vendure/core": "^2.3.0",
     "pg": "^8.7.1",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "ts-node-dev": "^2.0.0",

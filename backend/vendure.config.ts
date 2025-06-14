@@ -6,14 +6,12 @@ import * as path from 'path';
 export const config: VendureConfig = {
   apiOptions: {
     port: 3000,
-    host: '0.0.0.0',             // <<< hier hinzufügen
+    hostname: '0.0.0.0',       // <<< vorher "host"
     adminApiPath: 'admin-api',
     shopApiPath: 'shop-api',
-    adminApiPlayground: true,    // Admin-Playground aktivieren
-    shopApiPlayground: true,     // Shop-Playground aktivieren
-    // CORS öffnen, damit der Proxy im Playground auf Deine API zugreifen kann:
-    adminApiCors: { origin: '*' },
-    shopApiCors: { origin: '*' },
+    adminApiPlayground: true,  // Admin-Playground aktivieren
+    shopApiPlayground: true,   // Shop-Playground aktivieren
+    cors: { origin: '*' },     // <<< statt adminApiCors / shopApiCors
   },
   dbConnectionOptions: {
     type: 'sqlite',
@@ -27,6 +25,6 @@ export const config: VendureConfig = {
   plugins: [
     DefaultJobQueuePlugin,
     DefaultSearchPlugin,
-    // …Deine weiteren Plugins
+    // …deine weiteren Plugins
   ],
 };

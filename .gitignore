@@ -24,7 +24,6 @@ yarn.lock
 pnpm-lock.yaml
 
 # Devcontainer & Editor settings
-.devcontainer/
 .vscode/
 .idea/
 

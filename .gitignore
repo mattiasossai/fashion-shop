@@ -49,3 +49,24 @@ jest-coverage/
 /.cache/
 /tmp/
 
+# Strapi / Backend
+/backend/node_modules/
+/backend/package-lock.json
+/backend/data.db
+
+# Next.js / Storefront
+/storefront/node_modules/
+/storefront/.next/
+/storefront/.turbo/
+/storefront/.vercel
+
+# IDE und Container
+.devcontainer/
+.vscode/
+.idea/
+
+# Logs, OS, Cache
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db

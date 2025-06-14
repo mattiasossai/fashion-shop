@@ -1,0 +1,17 @@
+{
+  "name": "storefront",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "13.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "@vendure/storefront-ui": "^1.0.0",
+    "graphql": "^16.5.0",
+    "urql": "^2.0.5"
+  }
+}
